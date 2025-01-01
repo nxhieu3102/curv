@@ -38,7 +38,7 @@ old_sha2 = { package = "sha2", version = "0.8" }
 zeroize = "1"
 merkle-cbt = "0.3"
 
-rust-gmp-kzen = { version = "0.5", features = ["serde_support"], optional = true }
+rust-gmp = { git = "https://github.com/nxhieu3102/rust-gmp", features = ["serde_support"], optional = true }
 num-bigint = { version = "0.4", features = ["serde"], optional = true }
 
 [dependencies.secp256k1]
@@ -58,7 +58,7 @@ proptest-derive = "0.2"
 blake2 = "0.9"
 
 [features]
-default = ["rust-gmp-kzen"]
+default = ["rust-gmp"]
 
 [package.metadata.docs.rs]
 rustdoc-args = [ "--html-in-header", "katex-header.html", "--cfg", "docsrs" ]

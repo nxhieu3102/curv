@@ -56,7 +56,7 @@ Use `cargo build` to build everything including curve implementations, cryptopri
 ### Big integer implementation
 The library supports a couple of bigint implementations and can easily switch between them.
 You can choose any one which you prefer by specifying a feature:
-* **rust-gmp-kzen**, uses GMP bindings, requires GMP to be installed on a machine. Used by default.
+* **rust-gmp**, uses GMP bindings, requires GMP to be installed on a machine. Used by default.
 * **num-bigint**, Rust's pure implementation of big integer. In order to use it, put in Cargo.toml:
   ```toml
   [dependencies.curv-kzen]

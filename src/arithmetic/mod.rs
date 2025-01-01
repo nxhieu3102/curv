@@ -20,14 +20,14 @@ mod samplable;
 mod serde_support;
 pub mod traits;
 
-#[cfg(not(any(feature = "rust-gmp-kzen", feature = "num-bigint")))]
+#[cfg(not(any(feature = "rust-gmp", feature = "num-bigint")))]
 compile_error!("You need to choose which bigint implementation to use. See crate features.");
-#[cfg(all(feature = "rust-gmp-kzen", feature = "num-bigint"))]
+#[cfg(all(feature = "rust-gmp", feature = "num-bigint"))]
 compile_error!("You can choose only one bigint implementation. See crate features.");
 
-#[cfg(feature = "rust-gmp-kzen")]
+#[cfg(feature = "rust-gmp")]
 mod big_gmp;
-#[cfg(feature = "rust-gmp-kzen")]
+#[cfg(feature = "rust-gmp")]
 pub use big_gmp::BigInt;
 
 #[cfg(feature = "num-bigint")]
